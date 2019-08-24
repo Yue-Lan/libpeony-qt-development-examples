@@ -11,7 +11,6 @@
  * For UI thread we should not block the ui in a long time, the async method
  * is recommended.
  */
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

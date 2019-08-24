@@ -41,6 +41,15 @@
 
 你可以使用qtcreator进行图形化的构建和与测试，或者只是使用qmake命令，这不是什么困难的事情；但是在之前首先得确保你的编译依赖。
 
+## 从简单的例子开始
+
+高楼大厦不是一步建起的，一个框架的实现也都是从简单的封装开始，一层一层的实现，最后才能以高级API的形式展现在我们的眼前。高级的API虽然易用，但是不会暴露过多的实现接口，使用的场景也受到各种限制。
+
+我建议以这样的顺序去了解libpeony-qt整个框架，首先是它的核心部分，core是对glib/gio api的第一层封装；然后是file-operation，它是介于高级api和glib/gio以及core之间的一层；最后是model层以及view层，它实现了libpeony-qt的底层api向qt model/view设计模式的抽象。
+
+在exaples中，
+file-enumerations和info-querying目录下的demo属于底层api，我建议先从这两个目录下的demo看起；而model目录下的demo则属于顶层api，可读性强、易于使用，但是难以完全理解。至于中间层级的api，我也许很难将它们以一个比较合适的demo展现出来，但也并不意味着它不重要。
+
 ## Hacking、Issue与Contribute
 
 我希望大家能够通过这些例子去理解如何使用libpeony-qt去开发一个文件管理器，我不会暴露我对glib的封装，这些意义不大，我想让大家以qt的思路去进行快速的开发，这样能够提升很多效率。

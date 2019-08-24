@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     sync-querying \
-    async-querying
+    async-querying \
+    recommand-usage

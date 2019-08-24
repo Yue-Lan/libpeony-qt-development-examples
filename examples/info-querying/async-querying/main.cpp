@@ -8,6 +8,12 @@
 #include <QDebug>
 #include <QTextEdit>
 
+/*!
+ * \deprecated
+ * I do not recommend you use this example code in your project.
+ * But it will help you understand the design of libpeony-qt's
+ * core framework.
+ */
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
