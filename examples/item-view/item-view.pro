@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    special-treeview
+    special-treeview \
+    qss-icon-view
