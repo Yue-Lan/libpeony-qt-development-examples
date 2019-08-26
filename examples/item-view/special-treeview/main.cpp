@@ -4,7 +4,7 @@
 #include <PeonyFileItemModel>
 #include <PeonyFileItem>
 
-#include <QTreeView>
+#include "treeview.h"
 #include <QHeaderView>
 
 /// FileItemModel do not has sort and fiter function itself
@@ -23,20 +23,18 @@ int main(int argc, char *argv[])
     Peony::FileItemProxyFilterSortModel proxy_model;
     proxy_model.setSourceModel(&model);
 
-    QTreeView v;
-
-    v.setSelectionMode(QTreeView::ExtendedSelection);
+    TreeView v;
 
     /// we have to enable sort for activate the proxy sort function.
     v.setSortingEnabled(true);
     v.header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     v.setModel(&proxy_model);
 
-    v.connect(&v, &QTreeView::expanded, [&](const QModelIndex &index){
+    v.connect(&v, &TreeView::expanded, [&](const QModelIndex &index){
         auto item = proxy_model.itemFromIndex(index);
         item->findChildrenAsync();
     });
-    v.connect(&v, &QTreeView::collapsed, [&](const QModelIndex &index){
+    v.connect(&v, &TreeView::collapsed, [&](const QModelIndex &index){
         auto item = proxy_model.itemFromIndex(index);
         item->clearChildren();
     });

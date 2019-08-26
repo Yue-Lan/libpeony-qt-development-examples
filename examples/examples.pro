@@ -3,4 +3,5 @@ TEMPLATE = subdirs
 SUBDIRS += \
     file-enumerations \
     info-querying \
-    model-usages
+    model-usages \
+    item-view
