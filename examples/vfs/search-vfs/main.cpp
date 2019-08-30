@@ -18,7 +18,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    SearchVFSRegister::registSearchVFS();
+    Peony::SearchVFSRegister::registSearchVFS();
     MainWindow w;
     QToolBar t;
     QLineEdit e;
@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
         v->setDefaultDropAction(Qt::MoveAction);
 
         Peony::FileItemModel *model = new Peony::FileItemModel(v);
+        model->setPositiveResponse();
         model->setRootUri(e.text());
         Peony::FileItemProxyFilterSortModel *proxy_model = new Peony::FileItemProxyFilterSortModel(model);
         proxy_model->setSourceModel(model);
