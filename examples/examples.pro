@@ -5,4 +5,5 @@ SUBDIRS += \
     info-querying \
     model-usages \
     item-view \
-    vfs
+    vfs \
+    ui-control
