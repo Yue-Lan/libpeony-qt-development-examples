@@ -16,9 +16,19 @@
 #include <QAction>
 #include <PeonyFileOperationManager>
 
+#include <QTextEdit>
+#include <QPainter>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    QTextEdit gg;
+    gg.setStyleSheet("padding: 10;"
+                     "border-color: red");
+    QPainter p;
+    gg.show();
+
     MainWindow w;
     QToolBar t;
     QLineEdit e;
