@@ -4,6 +4,8 @@
 #include <QUrl>
 #include <QMenu>
 
+#include <QMouseEvent>
+
 ButtonGroup::ButtonGroup(QWidget *parent) : QToolBar(parent)
 {
     setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -71,4 +73,13 @@ void ButtonGroup::addButton(const QString &uri, bool setMenu)
     }
 
     addAction(action);
+}
+
+void ButtonGroup::mousePressEvent(QMouseEvent *e)
+{
+    //if you click a toobar button, this event will not be triggered/
+    //you can use this event trigger the 'clicked blank' event.
+    e->ignore();
+    qDebug()<<"mouse presse event";
+    QToolBar::mousePressEvent(e);
 }

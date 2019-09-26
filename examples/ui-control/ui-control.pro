@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    path-bar-examples
+    path-bar-examples \
+    tab-page

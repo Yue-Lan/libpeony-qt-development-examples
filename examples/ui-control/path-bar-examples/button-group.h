@@ -19,6 +19,7 @@ public Q_SLOTS:
 
 protected:
     void addButton(const QString &uri, bool setMenu = true);
+    void mousePressEvent(QMouseEvent *e) override;
 
 private:
     QString m_current_uri;
