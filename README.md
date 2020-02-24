@@ -11,9 +11,9 @@
 ### 依赖
 我们需要libpeony-qt的头文件和so库才能进行构建，为了方便大家快速构建，我提供了两种依赖安装方式：
 
-1. 从peony-qt项目的libpeony-qt源码构建安装依赖（推荐）
+1. 从peony项目的libpeony-qt源码构建安装依赖（推荐）
 
-- git clone [peony-qt项目](https://github.com/explorer-cs/peony-qt.git)， 然后进入libpeony-qt目录，build后执行：
+- git clone [peony项目](https://github.com/ukui/peony)， 然后进入libpeony-qt目录，build后执行：
 
 - > sudo make install
 
@@ -56,6 +56,6 @@ file-enumerations和info-querying目录下的demo属于底层api，我建议先�
 
 在看懂了这些用例以后，我希望你能够了解我为什么设计这样的一个框架，这对于你掌握和使用它是很有帮助的，而不是仅仅只是照搬例子中的代码，最重要的是自己的思路。
 
-如果你对qt的model/view编程已经有了比较深刻的了解，同时对于glib和gio的接口也很熟悉的话，我欢迎你加入到peony-qt的开发中来；如果还没有，也可以先从这些简单例子入手。
+如果你对qt的model/view编程已经有了比较深刻的了解，同时对于glib和gio的接口也很熟悉的话，我欢迎你加入到Peony的开发中来；如果还没有，也可以先从这些简单例子入手。
 
-我欢迎大家提出issue，不限于bug和feature；大家的建议可能成为未来peony-qt的导向，毕竟我一个人的视野是有限的。
+我欢迎大家提出issue，不限于bug和feature；大家的建议可能成为未来Peony的导向，毕竟我一个人的视野是有限的。
