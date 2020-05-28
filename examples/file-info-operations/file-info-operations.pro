@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    search-vfs
+    query-async \
+    query-sync
