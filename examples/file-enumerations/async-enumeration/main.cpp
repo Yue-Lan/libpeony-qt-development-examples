@@ -6,9 +6,17 @@
 #include <QDebug>
 
 /*!
+ * \title Async Enumeration
  * \brief
+ * Peony provides a file enumeration class FileEnumerator.
+ * There are 2 basic usage for enumerate a directory, sync mode
+ * and async mode. This is the async mode version's example.
+ *
  * You will see how doing a async enumeration with Peony::FileEnumerator.
- * For UI thread we should not block the ui in a long time, the async method
+ * The async enumeration do not block current thread, and should use signal
+ * to handle the result when enumeration job finished.
+ *
+ * For UI thread we should not block the ui in a long time, so the async method
  * is recommended.
  */
 int main(int argc, char *argv[])

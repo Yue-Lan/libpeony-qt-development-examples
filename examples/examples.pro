@@ -7,4 +7,6 @@ SUBDIRS += \
     #item-view \
     #vfs #\
  \    #ui-control
-    file-info-operations
+    file-info-operations \
+    file-operations \
+    model

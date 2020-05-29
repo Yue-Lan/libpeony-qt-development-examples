@@ -5,6 +5,14 @@
 #include <QTextEdit>
 #include <QDebug>
 
+/*!
+ * \title Sync Enumeration
+ * \brief
+ * Peony provides a file enumeration class FileEnumerator.
+ * There are 2 basic usage for enumerate a directory, sync mode
+ * and async mode. This is the sync mode version's example.
+ */
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
